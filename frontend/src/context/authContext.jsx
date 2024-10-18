@@ -9,7 +9,7 @@ export const AuthContexProvider = ({ children }) => {
   );
   const login = async (inputs) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", inputs);
+      const res = await axios.post("https://blog-site-870t.onrender.com/api/auth/login", inputs);
       const userData = res.data;
       if (userData.token) {
         setCurrentUser(userData);
@@ -25,7 +25,7 @@ export const AuthContexProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/logout");
+      await axios.post("https://blog-site-870t.onrender.com/api/auth/logout");
       localStorage.removeItem("token");
       setCurrentUser(null);
     } catch (err) {
