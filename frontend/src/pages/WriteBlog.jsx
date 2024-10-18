@@ -54,14 +54,14 @@ const handleClick = async (e) => {
 
       if (state && state._id) {
           await axios.put(
-              `http://localhost:5000/api/posts/${state._id}`,
+              `https://blog-site-870t.onrender.com/api/posts/${state._id}`,
               postData,
               config
           );
           setToast({ message: "Post updated successfully!", type: "success" });
       } else {
           await axios.post(
-              "http://localhost:5000/api/posts",
+              "https://blog-site-870t.onrender.com/api/posts",
               postData,
               config
           );
