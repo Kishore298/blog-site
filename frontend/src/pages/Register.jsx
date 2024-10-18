@@ -16,7 +16,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", inputs);
+      await axios.post("https://blog-site-870t.onrender.com/api/auth/register", inputs);
       setToastMessage({ message: "Registration successful!", type: "success" });
       setTimeout(() => navigate("/login"), 2000); 
     } catch (err) {
