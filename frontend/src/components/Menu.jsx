@@ -14,7 +14,7 @@ const Menu = ({ cat }) => {
 
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/posts/?cat=${cat}`); 
+        const res = await axios.get(`https://blog-site-870t.onrender.com/api/posts/?cat=${cat}`); 
         setPosts(res.data);
       } catch (err) {
         console.error("Error fetching posts:", err); 
