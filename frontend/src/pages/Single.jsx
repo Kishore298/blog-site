@@ -20,7 +20,7 @@ const Single = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/posts/${postId}`);
+        const res = await axios.get(`https://blog-site-870t.onrender.com/api/posts/${postId}`);
         console.log(res.data);
         setPost(res.data);
         setToast({ message: "Post loaded successfully!", type: "success" });
@@ -35,7 +35,7 @@ const Single = () => {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/posts/${postId}`);
+        await axios.delete(`https://blog-site-870t.onrender.com/api/posts/${postId}`);
         setToast({ message: "Post deleted successfully!", type: "success" });
         navigate("/");
       } catch (err) {
