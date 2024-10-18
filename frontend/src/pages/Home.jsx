@@ -13,7 +13,7 @@ const Home = () => {
     console.log("Category:", cat);
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/posts${cat}`);
+        const res = await axios.get(`https://blog-site-870t.onrender.com/api/posts${cat}`);
         console.log("Response data:", res.data);
         setPosts(res.data);
 
